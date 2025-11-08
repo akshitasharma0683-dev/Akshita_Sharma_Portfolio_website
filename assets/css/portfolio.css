@@ -1,0 +1,353 @@
+         .aboutg{
+        margin: 20px;
+      }
+
+      .aboutg img{
+        height: 200px;
+        width: 200px;
+      }
+
+      .carousel img{
+        width: 100%;
+        height: 500px;
+      }
+      .container h3{
+          text-align: center;
+
+        color: rgb(155, 87, 218);
+        font-weight: bold;
+      }
+      .container span{
+        color: #643c1c;
+          text-align: center;
+
+      }
+      .container{
+        padding: 10px;
+        justify-content: center;
+      }
+      .card img{
+        height: 100px;
+        width: 100px;
+        margin: 15px;
+      }
+/* hero section */
+        @import url("https://fonts.googleapis.com/css?family=Courgette|Roboto");
+* {
+  box-sizing: border-box;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+blockquote {
+  position: relative;
+  padding-left: 1.5rem;
+  font-family: "Courgette", serif;
+  font-size: 2rem;
+  line-height: 1.25;
+  letter-spacing: -0.05rem;
+}
+blockquote:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background-color: #A9DFBF;
+  border-radius: 60px;
+}
+
+figure {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.hero:nth-child(1) figure {
+  background-image: url("./portfolioimage/pexels-kevin-ku-92347-577585.jpg");
+}
+.hero:nth-child(2) figure {
+  background-image: url("./portfolioimage/pexels-ingniostudio-665214.jpg");
+}
+.hero:nth-child(3) figure {
+  background-image: url("./portfolioimage/pexels-jeshoots-234527.jpg");
+}
+.hero:nth-child(4) figure {
+  background-image: url("./portfolioimage/pexels-joshsorenson-1714205.jpg");
+}
+
+.hero-inner {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, auto, auto, 0);
+}
+@supports (-webkit-overflow-scrolling: touch) {
+  .hero-inner {
+    clip: unset;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+.hero__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 1rem;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: "Courgette", serif;
+  font-size: 8vw;
+  letter-spacing: -0.125rem;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .hero__title {
+    font-size: 6rem;
+  }
+}
+
+.content {
+  position: relative;
+  margin: 0 auto 8rem;
+  padding: 2rem;
+}
+.content:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  z-index: 99;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.content__inner {
+  margin: 0 auto;
+  max-width: 700px;
+}
+.content__inner > * + * {
+  margin-top: 1.5rem;
+}
+.content__inner > blockquote {
+  margin: 3rem 0;
+}
+
+.content__title {
+  font-family: "Courgette", serif;
+  font-size: 3rem;
+  line-height: 1.25;
+  letter-spacing: -0.125rem;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .content__title {
+    font-size: 4rem;
+  }
+}
+
+.content__author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  width: 100%;
+  font-family: "Courgette", serif;
+  font-size: 1.5rem;
+  letter-spacing: -0.125rem;
+  text-align: center;
+}
+.content__author:before, .content__author:after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: #A9DFBF;
+}
+.content__author:before {
+  margin-right: 1rem;
+}
+.content__author:after {
+  margin-left: 1rem;
+}
+
+
+
+/* contact section */
+
+/* ===== Robust Contact CSS (paste LAST) ===== */
+
+.contactbody {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
+              url('https://unsplash.it/1600/900?image=871') center/cover fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 20px;
+  box-sizing: border-box;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #fff;
+}
+
+/* main wrapper */
+.contactbody .portfolio-contact {
+  width: 100%;
+  max-width: 1100px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* heading */
+.contactbody .portfolio-contact-title {
+  margin: 0;
+  padding: 20px;
+  font-size: 1.9rem;
+  text-align: center;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+/* map wrapper */
+.contactbody .portfolio-contact-map-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 40%;
+  overflow: hidden;
+}
+
+/* responsive iframe */
+.contactbody .portfolio-contact-map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* form area */
+.contactbody #portfolio-contact-form {
+  padding: 22px 28px 32px 28px;
+  box-sizing: border-box;
+}
+
+/* stronger selectors for fields to prevent overrides */
+.contactbody .portfolio-input,
+.contactbody .portfolio-textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+
+  /* translucent (glass) background for aesthetic */
+  background: rgba(255, 255, 255, 0.12);        /* translucent white */
+  -webkit-backdrop-filter: blur(6px);           /* optional frosted blur (Safari/Chrome) */
+          backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255,255,255,0.14);
+  color: #fff;              /* bright readable text */
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition: border-color .12s, box-shadow .12s, background .12s;
+  /* If absolutely needed to override, uncomment following line */
+  /* background: rgba(255,255,255,0.12) !important; */
+  /* color: #fff !important; */
+}
+
+/* make placeholder readable */
+.contactbody .portfolio-input::placeholder,
+.contactbody .portfolio-textarea::placeholder {
+  color: rgba(255,255,255,0.75);
+  opacity: 1;
+}
+
+/* focus state — brighter and clear text */
+.contactbody .portfolio-input:focus,
+.contactbody .portfolio-textarea:focus {
+  outline: none;
+  border-color: rgba(120,180,255,0.95);
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 6px 18px rgba(50,120,255,0.08);
+  color: #fff;
+  /* color: #fff !important; */
+}
+
+/* textarea sizing */
+.contactbody .portfolio-textarea {
+  min-height: 200px;
+  resize: vertical;
+}
+
+/* error messages */
+.contactbody .portfolio-error {
+  color: #ffb4b4;
+  font-size: 0.88rem;
+  margin: 6px 0 8px 0;
+  min-height: 18px;
+}
+
+/* submit button */
+.contactbody .portfolio-contact-btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background: linear-gradient(180deg,#0b77ff,#0056d6);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform .12s ease, filter .12s ease;
+}
+
+.contactbody .portfolio-contact-btn:hover,
+.contactbody .portfolio-contact-btn:focus {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .contactbody .portfolio-contact-map-wrapper {
+    padding-bottom: 56%;
+  }
+  .contactbody #portfolio-contact-form {
+    padding: 16px;
+  }
+  .contactbody .portfolio-contact-title {
+    font-size: 1.3rem;
+    padding: 14px;
+  }
+  .contactbody .portfolio-contact-btn {
+    width: 100%;
+  }
+}
+
+
