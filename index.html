@@ -851,25 +851,70 @@ During my journey, I’ve worked on live projects, helped automate workflows, an
   </section>
 </div>
      </section>
-  
+  <script>
+(function () {
+  'use strict';
+  const form = document.getElementById('portfolio-contact-form');
+  if (!form) return;
+
+  const btn = document.getElementById('portfolio-contact-submit');
+  const toast = document.getElementById('portfolio-contact-toast');
+  const toastClose = toast.querySelector('.portfolio-toast-close');
+
+  function setError(id, msg) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = msg || '';
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+  function isPhoneOkay(phone) {
+    return phone.trim() === '' || /^[0-9+\-\s()]+$/.test(phone);
+  }
+
+  function showToast(msg = 'Message sent successfully!') {
+    const text = toast.querySelector('.portfolio-toast-text');
+    if (text) text.textContent = msg;
+    toast.style.display = 'block';
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(hideToast, 4000);
+  }
+  function hideToast() {
+    toast.style.display = 'none';
+    clearTimeout(toast._timer);
+  }
+  toastClose.addEventListener('click', hideToast);
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    let ok = true;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
+    const human = form.human.value.trim();
+    const comments = form.comments.value.trim();
+
+    setError('err-name', '');
+    setError('err-email', '');
+    setError('err-phone', '');
+    setError('err-human', '');
+    setError('err-comments', '');
+
+    if (name.length < 2) { setError('err-name', 'Please enter your name.'); ok = false; }
+    if (!isValidEmail(email)) { setError('err-email', 'Enter a valid email.'); ok = false; }
+    if (!isPhoneOkay(phone)) { setError('err-phone', 'Invalid phone number.'); ok = false; }
+    if (!/^\s*(4|four)\s*$/i.test(human)) { setError('err-human', 'Wrong answer (2+2=?).'); ok = false; }
+    if (comments.length < 10) { setError('err-comments', 'Please enter at least 10 characters.'); ok = false; }
+
+    if (ok) {
+      showToast('Message validated — sending...');
+      form.reset();
+    }
+  });
+})();
+</script>
 </body>
 </html>
-<script>
-            function slideTo(index) {
-            currentSlide = index;
-            slider.style.transform = `translateX(-${index * 25}%)`;
-        }
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + 4) % 4;
-            slideTo(currentSlide);
-        }
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % 4;
-            slideTo(currentSlide);
-        }
-        // Optional auto-slide (comment out if not wanted)
-        setInterval(() => {
-            nextSlide();
-        }, 5000);
 
-</script>
+
