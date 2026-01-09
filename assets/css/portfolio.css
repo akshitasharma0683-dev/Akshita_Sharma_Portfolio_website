@@ -1080,7 +1080,7 @@ figure {
   min-height: 100vh;
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
-    url("../portfolioimage/bg.jpeg") center / cover no-repeat fixed;
+    url("../portfolioimage/bg.jpg") center / cover no-repeat fixed;
 }
 
 
