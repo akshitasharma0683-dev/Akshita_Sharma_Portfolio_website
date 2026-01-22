@@ -580,7 +580,7 @@ figure {
         /* Experience Section */
         .experience {
             margin-top: 60px;
-            background: #f9f9f9; /* Light background */
+            background: transparent; /* Light background */
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.1);
@@ -1076,11 +1076,10 @@ figure {
    PROJECTS SECTION
    ===================== */
 .projects-section {
+    background: transparent;
+
   padding: 90px 0;
   min-height: 100vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
-    url("../portfolioimage/bg.jpeg") center / cover no-repeat fixed;
 }
 
 
@@ -1154,7 +1153,6 @@ figure {
   color: #fff;
   font-size: 14px;
   text-decoration: none;
-  transition: background 0.3s ease;
 }
 
 .project-links a:hover {
@@ -1253,3 +1251,58 @@ figure {
             }
         }
    
+        .bg-wrapper {
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+    url("../portfolioimage/bg.jpeg") center / cover no-repeat fixed;
+
+  padding: 80px 0;
+}
+.mid-bg h2,
+.mid-bg h3 {
+  color: #fff;
+}
+
+.mid-bg .project-card,
+.mid-bg .experience,
+.mid-bg .skill-slide {
+  background: #fff;
+}
+
+/* =========================
+   FIX: MID SECTION BACKGROUND
+   About → Skills → Experience → Projects
+   (Hero & Contact untouched)
+========================= */
+
+/* background wrapper */
+.bg-wrapper {
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+    url("../portfolioimage/bg.jpeg") center / cover no-repeat;
+  padding: 80px 0;
+  overflow: hidden; /* prevents margin escape */
+}
+
+/* remove white blockers */
+.about-section,
+.skills-section {
+  background: transparent;
+}
+
+/* fix margin escape */
+.experience {
+  margin-top: 0;
+  background: #fff;
+}
+
+/* projects must not own background */
+.projects-section {
+  background: transparent;
+}
+
+/* text color on background */
+.bg-wrapper h2,
+.bg-wrapper h3 {
+  color: #fff;
+}
