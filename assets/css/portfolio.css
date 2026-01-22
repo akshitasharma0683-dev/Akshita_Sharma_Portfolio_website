@@ -1280,7 +1280,7 @@ figure {
 .bg-wrapper {
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
-    url("../portfolioimage/bg.jpeg") center / cover no-repeat;
+    url("https://raw.githubusercontent.com/akshitasharma0683-dev/Akshita_Sharma_Portfolio_website/refs/heads/main/assets/portfolioimage/bg.jpg") center / cover no-repeat;
   padding: 80px 0;
   overflow: hidden; /* prevents margin escape */
 }
@@ -1293,7 +1293,7 @@ figure {
 
 /* fix margin escape */
 .experience {
-  margin-top: 0;
+  margin: 10;
   background: #fff;
 }
 
